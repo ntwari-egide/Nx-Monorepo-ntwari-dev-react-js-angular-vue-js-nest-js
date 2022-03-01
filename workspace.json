@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "travelit-angular": "apps/travelit-angular",
+    "travelit-angular-e2e": "apps/travelit-angular-e2e"
+  }
 }

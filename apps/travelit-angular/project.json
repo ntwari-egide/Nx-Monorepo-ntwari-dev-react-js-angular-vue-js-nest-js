@@ -1,0 +1,93 @@
+{
+  "projectType": "application",
+  "root": "apps/travelit-angular",
+  "sourceRoot": "apps/travelit-angular/src",
+  "prefix": "ntwari-dev",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/travelit-angular",
+        "index": "apps/travelit-angular/src/index.html",
+        "main": "apps/travelit-angular/src/main.ts",
+        "polyfills": "apps/travelit-angular/src/polyfills.ts",
+        "tsConfig": "apps/travelit-angular/tsconfig.app.json",
+        "assets": [
+          "apps/travelit-angular/src/favicon.ico",
+          "apps/travelit-angular/src/assets"
+        ],
+        "styles": ["apps/travelit-angular/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/travelit-angular/src/environments/environment.ts",
+              "with": "apps/travelit-angular/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "travelit-angular:build:production"
+        },
+        "development": {
+          "browserTarget": "travelit-angular:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "travelit-angular:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/travelit-angular/src/**/*.ts",
+          "apps/travelit-angular/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/travelit-angular"],
+      "options": {
+        "jestConfig": "apps/travelit-angular/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
