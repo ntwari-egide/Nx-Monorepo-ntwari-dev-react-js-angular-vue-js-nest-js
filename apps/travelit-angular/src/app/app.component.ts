@@ -7,5 +7,5 @@ import {unicornRocket} from "@ntwari-dev/utils"
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = `${unicornRocket} travelit-angular`;
+  title = `${unicornRocket} travelit-angulars`;
 }
