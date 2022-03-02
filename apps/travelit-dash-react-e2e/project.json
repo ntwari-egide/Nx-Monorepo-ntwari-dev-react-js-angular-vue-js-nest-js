@@ -1,0 +1,28 @@
+{
+  "root": "apps/travelit-dash-react-e2e",
+  "sourceRoot": "apps/travelit-dash-react-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/travelit-dash-react-e2e/cypress.json",
+        "devServerTarget": "travelit-dash-react:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "travelit-dash-react:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/travelit-dash-react-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["travelit-dash-react"]
+}

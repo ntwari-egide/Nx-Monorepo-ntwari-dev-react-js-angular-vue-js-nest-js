@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "travelit-angular": "apps/travelit-angular",
-    "travelit-angular-e2e": "apps/travelit-angular-e2e"
+    "travelit-angular-e2e": "apps/travelit-angular-e2e",
+    "travelit-dash-react": "apps/travelit-dash-react",
+    "travelit-dash-react-e2e": "apps/travelit-dash-react-e2e"
   }
 }
