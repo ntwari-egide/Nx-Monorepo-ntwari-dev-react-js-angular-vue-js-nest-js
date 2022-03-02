@@ -1,0 +1,28 @@
+{
+  "root": "apps/travelit-admin-dash-svelte-e2e",
+  "sourceRoot": "apps/travelit-admin-dash-svelte-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/travelit-admin-dash-svelte-e2e/cypress.json",
+        "devServerTarget": "travelit-admin-dash-svelte:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "travelit-admin-dash-svelte:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/travelit-admin-dash-svelte-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["travelit-admin-dash-svelte"]
+}

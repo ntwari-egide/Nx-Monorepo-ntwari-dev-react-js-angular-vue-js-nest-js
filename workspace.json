@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "travelit-admin-dash-svelte": "apps/travelit-admin-dash-svelte",
+    "travelit-admin-dash-svelte-e2e": "apps/travelit-admin-dash-svelte-e2e",
     "travelit-angular": "apps/travelit-angular",
     "travelit-angular-e2e": "apps/travelit-angular-e2e",
     "travelit-backend": "apps/travelit-backend",

@@ -1,0 +1,66 @@
+{
+  "root": "apps/travelit-admin-dash-svelte",
+  "sourceRoot": "apps/travelit-admin-dash-svelte/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nxext/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "frameworkConfigFile": "@nxext/svelte/plugins/vite",
+        "outputPath": "dist/apps/travelit-admin-dash-svelte",
+        "assets": [
+          {
+            "glob": "/*",
+            "input": "./public/**",
+            "output": "./"
+          }
+        ],
+        "tsConfig": "apps/travelit-admin-dash-svelte/tsconfig.app.json"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nxext/vite:dev",
+      "options": {
+        "frameworkConfigFile": "@nxext/svelte/plugins/vite",
+        "outputPath": "dist/apps/travelit-admin-dash-svelte",
+        "assets": [
+          {
+            "glob": "/*",
+            "input": "./public/**",
+            "output": "./"
+          }
+        ],
+        "tsConfig": "apps/travelit-admin-dash-svelte/tsconfig.app.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/travelit-admin-dash-svelte/**/*.{ts,svelte,spec.ts}"
+        ]
+      }
+    },
+    "check": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "svelte-check",
+        "cwd": "apps/travelit-admin-dash-svelte"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/travelit-admin-dash-svelte"],
+      "options": {
+        "jestConfig": "apps/travelit-admin-dash-svelte/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
