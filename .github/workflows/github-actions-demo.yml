@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '14'
 
-      - run: pnpm install
+      - run: npm install
       - run: npx nx affected --target=build --parallel=3
       - run: npx nx affected --target=test --parallel=2
 
