@@ -1,0 +1,1 @@
+export const unicornRocket = 'Here is global rocket Imange'
