@@ -2,13 +2,16 @@
 import styles from './app.module.css';
 import NxWelcome from './nx-welcome';
 import { unicornRocket } from '@ntwari-dev/utils';
-
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import { Route, Link } from 'react-router-dom';
+import {Button} from 'antd'
 
 export function App() {
   return (
     <>
-      <NxWelcome title="travelit-dash-react" />
+      <Button type='primary'>Antd button click</Button>
+
+      <NxWelcome title={`${unicornRocket} travelit-dash-react`} />
       <div />
 
       {/* START: routes */}
