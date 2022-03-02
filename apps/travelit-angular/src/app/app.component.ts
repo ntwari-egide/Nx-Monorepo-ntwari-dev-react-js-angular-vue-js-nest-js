@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {unicornRocket} from "@ntwari-dev/utils"
 
 @Component({
   selector: 'ntwari-dev-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'travelit-angular';
+  title = `${unicornRocket} travelit-angular`;
 }
