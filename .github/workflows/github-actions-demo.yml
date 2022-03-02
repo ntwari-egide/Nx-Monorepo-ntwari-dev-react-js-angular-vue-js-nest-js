@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '14'
 
-      - run: pnpm install
+      - run: npm install
       - run: npx nx affected --target=build --parallel=3
       - run: npx nx affected --target=test --parallel=2
 
@@ -43,3 +43,31 @@ jobs:
       - run: npm install
       - run: npx nx affected --target=build --parallel=3
       - run: npx nx affected --target=test --parallel=2
+
+  test-react-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Testing react project
+        uses: nrwl/nx-set-shas@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: nx run travelit-dash-react:test
+
+  test-backend-nest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Testing backend nest
+        uses: nrwl/nx-set-shas@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: nx run travelit-backend:test
