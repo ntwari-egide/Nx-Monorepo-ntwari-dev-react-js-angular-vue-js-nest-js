@@ -71,3 +71,18 @@ jobs:
           node-version: '14'
       - run: npm install
       - run: nx run travelit-backend:test
+      
+  test-shora-api:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+        with: 
+          fetch-depth: 0
+      
+      - name: Testing shora api 
+        uses: nrwl/nx-set-shas@v2
+      - uses: actions/setup-maven@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: nx run shora-api:test
