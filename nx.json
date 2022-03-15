@@ -17,7 +17,12 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
         "accessToken": "NTljOGM5NjEtYzMxMi00NDIzLWI5NjktMWYzNGY0NjY4ZTgzfHJlYWQtd3JpdGU="
       }
     }
@@ -59,5 +64,8 @@
       }
     }
   },
-  "defaultProject": "travelit-angular"
+  "defaultProject": "travelit-angular",
+  "plugins": [
+    "@nxrocks/nx-spring-boot"
+  ]
 }

@@ -8,6 +8,7 @@
     "travelit-backend": "apps/travelit-backend",
     "travelit-dash-react": "apps/travelit-dash-react",
     "travelit-dash-react-e2e": "apps/travelit-dash-react-e2e",
-    "utils": "libs/utils"
+    "utils": "libs/utils",
+    "shora-api": "apps/shora-api"
   }
 }
