@@ -44,7 +44,7 @@ jobs:
       - run: npx nx affected --target=build --parallel=3
       - run: npx nx affected --target=test --parallel=2
 
-  test-react-project:
+  test-svelte-admin-dash:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -56,7 +56,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - run: nx run travelit-dash-react:test
+      - run: npx nx run travelit-admin-dash-svelte:test
 
   test-backend-nest:
     runs-on: ubuntu-latest
